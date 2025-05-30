@@ -100,8 +100,9 @@ html, body {
 /* Style for the text in the hero section */
 .hero-text {
   color: white; /* Make text white */
-  text-shadow: 0 4px 16px rgba(0,0,0,0.25), /* Soft shadow for lifted look */
-               0 1.5px 4px rgba(0,0,0,0.18); /* Extra shadow for more lift */
+  text-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 1.5px 4px rgba(0,0,0,0.18); /* Lifted look */
+  text-align: left; /* Left-rag alignment */
+  max-width: 500px; /* Keep text from getting too wide */
 }
 
 /* Make the About Me header in the hero section stand out more */
