@@ -47,7 +47,7 @@ html, body {
   color: #20bfcf; /* Lighter teal on hover */
 }
 
-/* Style for the Hero Section with background image and teal overlay */
+/* Style for the Hero Section with background image and a much lighter teal overlay */
 .hero {
   position: relative;
   min-height: 450px;
@@ -65,12 +65,12 @@ html, body {
   margin-bottom: 40px; /* Add space below the hero section */
 }
 
-/* Teal overlay only over the background, not the image */
+/* Make the overlay much lighter for better text readability */
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(32, 191, 207, 0.18); /* Lighter teal overlay */
+  background: rgba(255, 255, 255, 0.65); /* Very light overlay */
   z-index: 1; /* Place overlay above background but below content */
   pointer-events: none; /* Allow clicks through overlay */
 }
@@ -189,14 +189,59 @@ html, body {
   width: 40px; /* Set logo size */
   height: 40px;
   vertical-align: middle;
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
-  border-radius: 8px; /* Slightly rounded corners */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow */
+  transition: transform 0.2s; /* Smooth hover effect */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+  background: none; /* Remove background */
+  padding: 0; /* Remove padding */
 }
 
 /* Make the logo react on hover */
 .linkedin-link:hover .linkedin-logo {
   transform: scale(1.15) rotate(-5deg); /* Slightly enlarge and rotate */
-  box-shadow: 0 4px 16px rgba(32,191,207,0.25); /* Teal glow */
-  background: #eaf6fa; /* Optional: subtle background on hover */
+  box-shadow: none; /* No shadow on hover */
+  background: none; /* No background on hover */
+}
+
+/* Add a little space between LinkedIn logo and email */
+.contact-separator {
+  display: inline-block;
+  width: 24px;
+}
+
+/* Style the email link */
+.email-link {
+  color: #1696a7; /* Match the dark teal */
+  font-size: 1.1em;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-left: 4px;
+  transition: color 0.2s;
+}
+
+.email-link:hover {
+  color: #20bfcf; /* Lighter teal on hover */
+  text-decoration: underline;
+}
+
+/* Center all content in sections below the hero section */
+.bio,
+.skills,
+.projects,
+.contact {
+  text-align: center; /* Center all text and content */
+}
+
+/* Add even vertical spacing between all main sections below the header */
+.bio,
+.skills,
+.projects,
+.contact {
+  margin-top: 48px;   /* Space above each section */
+  margin-bottom: 48px; /* Space below each section */
+}
+
+/* Remove extra margin from the first section after the hero */
+.bio {
+  margin-top: 0;
 }
