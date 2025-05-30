@@ -50,7 +50,7 @@ html, body {
 /* Style for the Hero Section with background image and teal overlay */
 .hero {
   position: relative; /* Needed for overlay positioning */
-  min-height: 300px; /* Set a minimum height for the hero section */
+  min-height: 450px; /* Make the hero section bigger */
   background-image: url('img/Hero-bg - Edited.jpg'); /* Add the image as the background */
   background-size: cover; /* Make image cover the section */
   background-position: center; /* Center the image */
