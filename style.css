@@ -61,7 +61,7 @@ html, body {
   justify-content: flex-start; /* Align content to the left */
   color: white;
   overflow: hidden;
-  padding-left: 40px; /* Add space on the left */
+  padding-left: 90px; /* Move content even more to the right */
 }
 
 /* Teal overlay only over the background, not the image */
@@ -69,7 +69,7 @@ html, body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(32, 191, 207, 0.4); /* Teal color with transparency */
+  background: rgba(32, 191, 207, 0.18); /* Lighter teal overlay */
   z-index: 1; /* Place overlay above background but below content */
   pointer-events: none; /* Allow clicks through overlay */
 }
@@ -102,13 +102,62 @@ html, body {
   color: white; /* Make text white */
   text-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 1.5px 4px rgba(0,0,0,0.18); /* Lifted look */
   text-align: left; /* Left-rag alignment */
-  max-width: 500px; /* Keep text from getting too wide */
+  max-width: 700px; /* Allow the paragraph to expand more */
 }
 
-/* Make the About Me header in the hero section stand out more */
+/* Make the About Me header in the hero section stand out more (white with glow) */
 .hero-text h2 {
   font-size: 2em;
   margin-bottom: 10px;
   color: white;
-  text-shadow: 0 4px 16px rgba(0,0,0,0.28), 0 1.5px 4px rgba(0,0,0,0.20);
+  /* Add a strong white glow and shadow for lift */
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.8), /* white glow */
+    0 4px 16px rgba(0,0,0,0.28),    /* soft dark shadow */
+    0 1.5px 4px rgba(0,0,0,0.20);   /* extra lift */
+}
+
+/* Make all main section headers (h2) look the same and use dark teal, except hero */
+.skills h2,
+.projects h2,
+.inspirations h2,
+.contact h2,
+.bio h2 {
+  font-size: 2em;
+  font-family: inherit;
+  color: #1696a7;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+/* Style for h3 in the Skills section */
+.skills h3 {
+  font-size: 2em; /* Same size as h2 */
+  font-family: inherit; /* Use the same font as the rest of the site */
+  color: #1696a7; /* Dark teal color */
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: bold;
+  text-align: center; /* Center the header above the list */
+}
+
+/* Center the Skills section header */
+.centered-header {
+  text-align: center;
+}
+
+/* Center the list of skills and remove bullets */
+.skills ul {
+  text-align: center; /* Center the list items */
+  padding-left: 0;    /* Remove default left padding */
+  margin: 0 auto;     /* Center the list itself */
+  list-style: none;   /* Remove bullets */
+}
+
+/* Make the paragraph in the hero section and the skills list larger for readability */
+.hero-text p,
+.skills ul li {
+  font-size: 1.25em; /* Make text larger and easier to read */
 }
