@@ -51,9 +51,10 @@ html, body {
 .hero {
   position: relative; /* Needed for overlay positioning */
   min-height: 300px; /* Set a minimum height for the hero section */
-  background-image: url('img/Hero-bg.jpg');
+  background-image: url('img/Hero-bg - Edited.jpg'); /* Add the image as the background */
   background-size: cover; /* Make image cover the section */
   background-position: center; /* Center the image */
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +68,7 @@ html, body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(32, 191, 207, 0.4); /* Lighter teal with more transparency */
+  background: rgba(32, 191, 207, 0.4); /* Teal color with transparency */
   z-index: 1; /* Place overlay above image but below content */
 }
 
