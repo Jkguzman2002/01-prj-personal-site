@@ -49,31 +49,65 @@ html, body {
 
 /* Style for the Hero Section with background image and teal overlay */
 .hero {
-  position: relative; /* Needed for overlay positioning */
-  min-height: 450px; /* Make the hero section bigger */
-  background-image: url('img/Hero-bg - Edited.jpg'); /* Add the image as the background */
-  background-size: cover; /* Make image cover the section */
-  background-position: center; /* Center the image */
+  position: relative;
+  min-height: 450px;
+  background-image: url('img/Hero-bg - Edited.jpg'); /* Use the correct image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Place image and text side by side */
   align-items: center;
-  justify-content: center;
-  color: white; /* Make text white for contrast */
-  overflow: hidden; /* Hide anything outside the section */
+  justify-content: flex-start; /* Align content to the left */
+  color: white;
+  overflow: hidden;
+  padding-left: 40px; /* Add space on the left */
 }
 
-/* Teal overlay using a pseudo-element */
+/* Teal overlay only over the background, not the image */
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(32, 191, 207, 0.4); /* Teal color with transparency */
-  z-index: 1; /* Place overlay above image but below content */
+  z-index: 1; /* Place overlay above background but below content */
+  pointer-events: none; /* Allow clicks through overlay */
 }
 
 /* Make sure hero content is above the overlay */
 .hero > * {
   position: relative;
   z-index: 2;
+}
+
+/* Style for the image inside the hero section */
+.hero-img {
+  margin-right: 40px; /* Space between image and text */
+  flex-shrink: 0; /* Prevent image from shrinking */
+  z-index: 3; /* Make sure image is above the overlay */
+  position: relative; /* Needed for z-index to work */
+}
+
+.hero-img img {
+  width: 260px; /* Make the image slightly bigger */
+  height: auto;
+  border-radius: 25px; /* Rounded edges */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12); /* Soft shadow for effect */
+  display: block;
+  object-fit: cover; /* Make sure image fits nicely */
+}
+
+/* Style for the text in the hero section */
+.hero-text {
+  color: white; /* Make text white */
+  text-shadow: 0 4px 16px rgba(0,0,0,0.25), /* Soft shadow for lifted look */
+               0 1.5px 4px rgba(0,0,0,0.18); /* Extra shadow for more lift */
+}
+
+/* Make the About Me header in the hero section stand out more */
+.hero-text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.28), 0 1.5px 4px rgba(0,0,0,0.20);
 }
