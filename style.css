@@ -183,3 +183,20 @@ html, body {
   padding: 8px;
   display: block;
 }
+
+/* Style for the LinkedIn logo in the contact section */
+.linkedin-logo {
+  width: 40px; /* Set logo size */
+  height: 40px;
+  vertical-align: middle;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow */
+}
+
+/* Make the logo react on hover */
+.linkedin-link:hover .linkedin-logo {
+  transform: scale(1.15) rotate(-5deg); /* Slightly enlarge and rotate */
+  box-shadow: 0 4px 16px rgba(32,191,207,0.25); /* Teal glow */
+  background: #eaf6fa; /* Optional: subtle background on hover */
+}
