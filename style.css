@@ -2,7 +2,7 @@
 
 /* Style for the header */
 .site-header {
-  background-color: #1696a7; /* Slightly darker teal blue */
+  background-color: white; /* White header background */
   width: 100%; /* Stretch across the top */
   padding: 0 !important; /* Make sure there is no padding */
   margin: 0; /* Remove default margin */
@@ -35,7 +35,7 @@ html, body {
 
 /* Style for the anchor tags (links) */
 .main-nav a {
-  color: white; /* White text for contrast */
+  color: #1696a7; /* Dark teal text for nav links */
   text-decoration: none; /* Remove underline */
   font-size: 1.1em; /* Slightly larger text */
   padding: 20px 0; /* Add space above and below links */
@@ -44,7 +44,7 @@ html, body {
 
 /* Optional: Change link color on hover */
 .main-nav a:hover {
-  color: #d4ffb2; /* Light green on hover */
+  color: #20bfcf; /* Lighter teal on hover */
 }
 
 /* Style for the Hero Section with background image and teal overlay */
