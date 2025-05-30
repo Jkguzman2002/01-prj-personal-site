@@ -62,6 +62,7 @@ html, body {
   color: white;
   overflow: hidden;
   padding-left: 90px; /* Move content even more to the right */
+  margin-bottom: 40px; /* Add space below the hero section */
 }
 
 /* Teal overlay only over the background, not the image */
@@ -160,4 +161,25 @@ html, body {
 .hero-text p,
 .skills ul li {
   font-size: 1.25em; /* Make text larger and easier to read */
+}
+
+/* Style for the project images in the Projects section */
+.project-images {
+  display: flex; /* Place images in a row */
+  flex-direction: row; /* Line up images horizontally */
+  align-items: center; /* Center images vertically */
+  justify-content: center; /* Center the row of images */
+  gap: 24px; /* Space between images */
+  margin: 30px 0 20px 0; /* Space above and below images */
+}
+
+.project-images img {
+  width: 320px; /* Make images a little bigger */
+  height: 200px; /* Adjust height to match new width */
+  object-fit: cover; /* Crop images to fit the box */
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  background: white;
+  padding: 8px;
+  display: block;
 }
