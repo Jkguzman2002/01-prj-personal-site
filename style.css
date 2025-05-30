@@ -1,1 +1,48 @@
 /* Add you CSS here */
+
+/* Style for the header */
+.site-header {
+  background-color: #1696a7; /* Slightly darker teal blue */
+  width: 100%; /* Stretch across the top */
+  padding: 0 !important; /* Make sure there is no padding */
+  margin: 0; /* Remove default margin */
+  box-sizing: border-box; /* Include border and padding in width */
+  position: relative; /* Make sure header stays at the top */
+  top: 0; /* Align to top */
+}
+
+/* Remove default margin and padding from body and html to prevent white space at the top */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* Feminine, modern sans-serif */
+  /* You can change 'Quicksand' to another sans-serif if you prefer */
+}
+
+/* Style for the navigation bar */
+.main-nav ul {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display links in a row */
+  justify-content: center; /* Center the links */
+}
+
+/* Style for each navigation link */
+.main-nav li {
+  margin: 0 15px; /* Space between links */
+}
+
+/* Style for the anchor tags (links) */
+.main-nav a {
+  color: white; /* White text for contrast */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1em; /* Slightly larger text */
+  padding: 20px 0; /* Add space above and below links */
+  display: block;
+}
+
+/* Optional: Change link color on hover */
+.main-nav a:hover {
+  color: #d4ffb2; /* Light green on hover */
+}
